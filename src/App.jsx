@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './images/web-crawler.jpg';
 import './App.css';
-import Search from './components/Search';
+import Search from './components/Search.jsx';
 
 class App extends Component {
   render() {
