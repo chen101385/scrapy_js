@@ -10,4 +10,11 @@ const crawl = async (url = `https://www.airbnb.com/s/Palm-Desert--CA--USA/homes?
     const page = await browser.newPage();
     await page.goto(url);
     await page.screenshot({ path: `./screenshots/Palm_Desert_Coachella_${Date.now()}` })
+    await browser.close();
 }
+
+crawl();
+
+module.exports = {
+    crawl,
+};
