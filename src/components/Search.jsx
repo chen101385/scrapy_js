@@ -19,7 +19,7 @@ class Search extends Component {
         return (
             <div>
                 <FormControl type="text" placeholder="start crawling here" ref="SearchInput" className="search" value={this.state.form} onChange={e => this.onFormChange(e.target.value)} />
-                <input type="submit" value="search" />
+                <input type="submit" value="search" onClick={() => this.props.onSubmit(this.state.input)}/>
             </div>
         )
     }
