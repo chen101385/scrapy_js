@@ -7,10 +7,16 @@ class App extends Component {
   constructor(props) {
     super(props)
 
+    this.state = {
+      currentScrape: ''
+    }
+
     this.onSubmit = this.onSubmit.bind(this);
   }
-  onSubmit(input) {
-    //input working; tested via console.log
+  onSubmit(e) {
+    e.preventDefault();
+
+    this.setState({ currentScrape: '' })
   }
 
   render() {
