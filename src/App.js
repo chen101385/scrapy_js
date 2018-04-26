@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './images/web-crawler.jpg';
 import './App.css';
+import Search from './components/Search';
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to Scrapy_JS!</h1>
         </header>
+        <Search />
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
