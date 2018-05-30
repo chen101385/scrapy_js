@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import logo from './images/web-crawler.jpg';
+import logo from '../../images/web-crawler.jpg';
 import './App.css';
-import Search from './components/Search.jsx';
+import Search from '../Search/Search.jsx';
 
-class App extends Component {
+export default class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       currentScrape: ''
@@ -35,4 +35,3 @@ class App extends Component {
   }
 }
 
-export default App;
