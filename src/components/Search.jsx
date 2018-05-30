@@ -11,8 +11,10 @@ class Search extends Component {
         };
     }
 
-    onFormChange(input) {
-        this.setState({ input })
+    this.onFormChange = this.onFormChange.bind(this);
+
+    onFormChange(e) {
+        this.setState({ input: e.target.value })
     }
 
     render() {

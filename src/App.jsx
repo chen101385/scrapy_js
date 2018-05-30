@@ -28,7 +28,7 @@ class App extends Component {
         </header>
         <Search onSubmit={input => this.onSubmit(input)} />
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          This is my intro
         </p>
       </div>
     );
