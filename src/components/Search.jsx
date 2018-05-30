@@ -1,30 +1,45 @@
 import React, { Component } from 'react';
-import { FormControl } from 'react-bootstrap';
 
 
-class Search extends Component {
+export default class Search extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            input: '',
+            value: '',
         };
+        this.onFormChange = this.onFormChange.bind(this);
+        this.onFormSubmit = this.onFormSubmit.bind(this);
     }
 
-    this.onFormChange = this.onFormChange.bind(this);
 
     onFormChange(e) {
-        this.setState({ input: e.target.value })
+        this.setState({ value: e.target.value })
+    }
+
+    onFormSubmit(e) {
+        e.preventDefault();
     }
 
     render() {
+        let { value } = this.state;
         return (
             <div>
-                <FormControl type="text" placeholder="start crawling here" ref="SearchInput" className="search" value={this.state.form} onChange={e => this.onFormChange(e.target.value)} />
-                <input type="submit" value="search" onClick={() => this.props.onSubmit(this.state.input)}/>
+                <form className="Search" onSubmit={this.onFormSubmit}>
+                    <input
+                        type="text"
+                        placeholder="start crawling here"
+                        ref="SearchInput"
+                        className="search"
+                        value={value}
+                        onChange={e => this.onFormChange(e.target.value)}
+                    />
+                    <input
+                        type="submit"
+                        value="Search"
+                    />
+                </form>
             </div>
         )
     }
 }
-
-export default Search;
