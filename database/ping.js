@@ -1,4 +1,4 @@
-import { client } from './config';
+const { client } = require('./config');
 
 //sends HEAD request to "/";
 client.ping({
@@ -7,6 +7,6 @@ client.ping({
     if (error) {
         console.error('elasticsearch cluster is down!');
     } else {
-        console.log('All is working properly');
+        console.log('Elasticsearch cluster is working properly');
     }
 });
